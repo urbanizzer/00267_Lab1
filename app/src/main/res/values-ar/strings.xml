@@ -4,4 +4,16 @@
     <string name="hello_message">مرحبا بالعالم!</string>
     <string name="ButtonText">أنا زر</string>
 
+    <string name="title_activity_login">نشاط تسجيل الدخول</string>
+    <string name="Login">تسجيل الدخول</string>
+    <string name="Login_Name">اسم الدخول</string>
+    <string name="Password">كلمه السر</string>
+    <string name="Enter_Password">أدخل كلمة المرور</string>
+    <string name="RadioButton">زر الراديو</string>
+    <string name="CheckBox">خانة الاختيار</string>
+    <string name="Switch">مفتاح كهربائي</string>
+    <string name="btn_star_big_on">btn_star_big_on</string>
+
+
+
 </resources>
