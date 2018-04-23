@@ -13,5 +13,11 @@
     <string name="Switch">Switch</string>
     <string name="btn_star_big_on">btn_star_big_on</string>
 
+    <string name="Login_Button">Login Button</string>
+    <string name="dialog_message">Dialog Message</string>
+    <string name="dialog_title">Dialog Title</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+
 
 </resources>
