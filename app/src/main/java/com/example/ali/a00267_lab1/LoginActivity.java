@@ -18,27 +18,27 @@ public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate( savedInstanceState );
-        setContentView( R.layout.activity_login );
-        Toolbar toolbar = (Toolbar) findViewById( R.id.toolbar );
-        setSupportActionBar( toolbar );
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_login);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
-        Log.i(ACTIVITY_NAME, "in onCreate");
+        Log.i(ACTIVITY_NAME, "In onCreate");
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById( R.id.fab );
-        fab.setOnClickListener( new View.OnClickListener() {
+        FloatingActionButton fab = findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make( view, "Replace with your own action", Snackbar.LENGTH_LONG )
-                        .setAction( "Action", null ).show();
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
             }
         });
 
-        Button myButton = (Button)findViewById(R.id.button2);
-        myButton.setOnClickListener( new View.OnClickListener() {
+        Button myButton = findViewById(R.id.button2);
+        myButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent( LoginActivity.this, StartActivity.class);
+                Intent intent = new Intent(LoginActivity.this, StartActivity.class);
                 startActivity(intent);
 
                 SharedPreferences prefs;
@@ -47,45 +47,52 @@ public class LoginActivity extends AppCompatActivity {
                 prefs = getSharedPreferences("My App", MODE_PRIVATE);
                 editor = prefs.edit();
 
-                TextView LoginTextView = findViewById(R.id.editText);
+                TextView LogininTextView = findViewById(R.id.editText);
 
-                editor.putString("LoginName", LoginTextView.getText().toString());
+                editor.putString("LoginName", LogininTextView.getText().toString());
                 editor.commit();
             }
+
+
         });
 
 
     }
 
-    protected void onStart(){
+    protected void onStart() {
         super.onStart();
-        Log.i(ACTIVITY_NAME,"in onStart");
+
+        Log.i(ACTIVITY_NAME, "In onStart");
         SharedPreferences prefs;
 
-        prefs = getSharedPreferences("My APP", MODE_PRIVATE);
+        prefs = getSharedPreferences("My App", MODE_PRIVATE);
 
-        TextView LoginTextView = findViewById(R.id.editText);
-        String nameString = prefs.getString("LoginName", "email@domain.com" );
-        LoginTextView.setText(nameString);
+        TextView LogininTextView = findViewById(R.id.editText);
+        String nameString = prefs.getString("LoginName", "email@domain.com");
+        LogininTextView.setText(nameString);
+
     }
 
-    protected void onResume(){
+    protected void onResume() {
         super.onResume();
-        Log.i(ACTIVITY_NAME,"in onResume");
+        Log.i(ACTIVITY_NAME, "In onResume");
     }
 
-    protected void onPause(){
+    protected void onPause() {
         super.onPause();
-        Log.i(ACTIVITY_NAME,"in onPause");
+        Log.i(ACTIVITY_NAME, "In o" +
+                "nPause");
     }
 
-    protected void onStop(){
+    protected void onStop() {
         super.onStop();
-        Log.i(ACTIVITY_NAME,"in onStop");
+        Log.i(ACTIVITY_NAME, "In onStop");
     }
 
-    protected void onDestroy(){
+    protected void onDestroy() {
         super.onDestroy();
-        Log.i(ACTIVITY_NAME,"in onDestory");
+        Log.i(ACTIVITY_NAME, "In onDestroy");
     }
+
+
 }
